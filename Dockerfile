@@ -10,7 +10,6 @@ RUN npm install glob rimraf
 RUN npm install --only=development
 
 COPY . .
-#COPY .env /usr/src/app/.env
 
 RUN npm run build
 
@@ -30,3 +29,7 @@ COPY . .
 COPY --from=development /usr/src/app/dist ./dist
 
 CMD ["node", "dist/main"]
+
+
+
+
